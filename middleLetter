@@ -1,0 +1,10 @@
+function getMiddle(s)
+{
+  let num=s.length;
+  if(num%2==1){
+    return s[Math.ceil(num/2)-1]
+  } else {
+    return s[(num/2)-1] +s[(num/2)]
+  }
+}
+console.log(getMiddle('wodar'))

@@ -1,0 +1,10 @@
+function findNb(m) {
+    let sum=0;
+  let n=0;
+ while(sum<m){
+   n+=1;
+   sum+=n**3;
+ }
+  if (sum==m) return (n)
+  else return -1
+}

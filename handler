@@ -1,0 +1,43 @@
+function handler(key, isCaps = false, isShift = false) {
+const symbols={
+  1: '!',
+    2: '@',
+    3: '#',
+    4: '$',
+    5: '%',
+    6: '^',
+    7: '&',
+    8: '*',
+    9: '(',
+    0: ')',
+    '-': '_',
+    '=': '+',
+    '[': '{',
+    ']': '}',
+    ';': ':',
+    "'": '"',
+    '\\': '|',
+    '/': '?',
+    '.': '>',
+    ',': '<',
+    '`': '~',
+  };
+  
+  const regexLetters = /^[a-z]$/gm;
+  const regexNumbers = /^[0-9]$/gm;
+  const regexCharacters = /[-!$%^&*()_+|~='"\\`{}\[\]:\/;<>?,.@#]/gm;
+  
+  if ( typeof(key)!=='string') return 'KeyError';
+  
+    if (key.match(regexLetters)){
+      if(isCaps!== isShift) {return key.toUpperCase()}
+      else return key.toLowerCase()
+    }
+else if (key.match(regexNumbers)||key.match(regexCharacters)){
+  if (isShift) {
+    return symbols[key]
+  } else return key;}
+
+return 'KeyError'
+
+}

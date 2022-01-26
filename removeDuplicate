@@ -1,0 +1,8 @@
+function removeConsecutiveDuplicates(s){
+         let newArray=[]
+let array=s.split(' ')
+
+     return  array.filter(function(value,index,array) {return value!=array[index+1]}).join(' ')
+
+
+    }

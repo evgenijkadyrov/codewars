@@ -1,0 +1,6 @@
+const filesNames=['main','login','  ','about']
+const fname=filesNames
+.map(el=> el.trim())
+.filter(Boolean)
+.map(el=>`cards/${el}`)
+console.log(fname)

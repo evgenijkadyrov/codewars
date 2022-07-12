@@ -1,0 +1,10 @@
+const filesNames=['main','login','  ','about']
+const fname=filesNames.reduce((acc,file)=>{
+  const name=file.trim()
+  if(name){
+    const path=`cards/${name}`
+    acc.push(path)
+  }
+  return acc
+},[])
+console.log(fname)
